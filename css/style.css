@@ -1,4 +1,10 @@
 @media screen and (0 <= width < 400px) {
+    .navbar__wrapper {
+     gap: 15px;   
+    }
+    .link_text {
+        display: none;
+    }
     .call {
         display: none; 
     } 
@@ -10,6 +16,19 @@
     }
     .logo::after {
         right: -1.1rem;
+    }
+
+    .title_highlight {
+        margin-left: 15px;
+    } 
+    
+    .title_highlight::before {
+        left: -15px;
+        
+    }
+
+    .paragraph_first {
+        margin: 0 15px;
     }
     .paragraph_second {
         display: none;
@@ -34,13 +53,142 @@
         width: 320px;
         height: auto;
     }
+
 }
 
-@media screen and (min-width: 400px) , (max-width: 800px) {
+@media screen and (400px <= width < 770px) {
     .navbar {
         justify-content: space-between;
     }
+    .navbar__wrapper {
+        gap: 0;
 
+    }
+
+    .link_text {
+        display: none;
+    }
+
+    .burger {
+        margin-right: 40px;
+    }
+
+    .logo::after{
+        left: -20px;
+    }
+    .service__link-4 {
+        display: none;
+    }
+    .service__link-5 {
+        display: none;
+    }
+    
+    .service__description {
+        display: flex;
+    }
+    .service__description {
+        margin-left: 30px;
+    }
+    .service__img {
+        max-width: 360px;
+        height: auto;
+        margin: 0 30px 
+    }
+    .service__list {
+        margin: 20px 15px;
+    }
+    .chat {
+        position: relative;
+        margin-left: 40px;
+    }
+
+    .chat::before {
+        content: '';
+        position: absolute;
+        left: -28px;
+        top: 5px;
+        height: 32px;
+        width: 2px;
+        background-color: #EAEAEA;
+        border-radius: 5px;
+    }
+
+    .title {
+        margin-left: 30px;
+    }
+    .title::before {
+        left: -30px;
+        
+    }
+
+    .paragraph_first {
+        margin-bottom: 20px;
+    }
+    .paragraph_3 {
+        display: none;
+    } 
+}
+@media screen and (770px <= width < 1120px) {
+    .navbar {
+        justify-content: space-between;
+    }
+    .navbar__wrapper {
+        gap: 0;
+
+    }
+
+    .burger {
+        margin-right: 40px;
+    }
+
+    .logo::after{
+        left: -20px;
+    }
+
+    .service__description {
+        display: flex;
+    }
+    .service__description {
+        margin-left: 30px;
+    }
+    .service__img {
+        max-width: 530px;
+        height: auto;
+        margin: 0 30px 
+    }
+    .service__list {
+        margin: 20px 15px;
+    }
+    .chat {
+        position: relative;
+        margin-left: 40px;
+    }
+
+    .chat::before {
+        content: '';
+        position: absolute;
+        left: -28px;
+        top: 5px;
+        height: 32px;
+        width: 2px;
+        background-color: #EAEAEA;
+        border-radius: 5px;
+    }
+
+    .title {
+        margin-left: 30px;
+    }
+    .title::before {
+        left: -30px;
+        
+    }
+
+    .paragraph_first {
+        margin-bottom: 20px;
+    }
+    .paragraph_3 {
+        display: none;
+    } 
 }
 
 
@@ -101,7 +249,6 @@ li {
 
 .navbar__wrapper {
     display: flex;
-    gap: 15px;
     align-items: center;
     
     
@@ -120,11 +267,11 @@ li {
 .logo::after {
     content: '';
     position: absolute;
-    height: 2.3rem;
-    width: .128rem;
+    top: 10px;
+    height: 32px;
+    width: 2px;
     background-color: #EAEAEA;
-    top: .6rem;
-    border-radius: .3rem;
+    border-radius: 5px;
 }
 
 /* ---- Main styles ---- */
@@ -137,27 +284,25 @@ li {
     line-height: 40px;
     font-family: TTlakes-title;
     color: #1B1C21;
-    position: relative;
-    margin-left: 15px;
 }
-
-.title::before {
+.title_highlight {
+    position: relative;
+}
+.title_highlight::before {
     content: '';
     position: absolute;
     height: 40px;
     width: 4px;
     background-color: #41F6D7;
-    left: -15px;
     border-radius: 0 10px 10px 0;
-
 }
-
 .service__contant {
     margin: 20px 0;
 }
 .service__list {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
 }
 .service__link {
     font-family: TTlakes-link;
@@ -179,16 +324,19 @@ li {
     color: #1B1C21;
     font-size: 14px;
     line-height: 18px;
-    margin: 0 15px;
+    /* margin: 0 15px; */
 }
 
 
 .arcticle {
     font-family: TTlakes-article;
-    margin: 15px 0 15px 15px ;
+    margin: 15px 0 15px 10px ;
 }
 .arcticle a {
     color: #1B1C21;
     font-weight: 800;
 }
 
+.icon-icon {
+    font-size: 13px;
+}
