@@ -83,6 +83,7 @@ body {
 }
 .burger_menu__list a,
 .burger_menu__list li{
+    color: #1B1C21;
     list-style: none;
     text-decoration: none;
 }
