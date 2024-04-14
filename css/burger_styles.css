@@ -3,6 +3,31 @@
     padding: 0;
 }
 
+@font-face {
+    font-family: TTlakes-title;
+    src: url(../fonts/TTLakes/TTLakes-Bold.ttf);
+}
+
+@font-face {
+    font-family: TTlakes;
+    src: url("../fonts/TTLakes/TTLakes-Regular.ttf");
+}
+
+@font-face {
+    font-family: TTlakes-link;
+    src: url("../fonts/TTLakes/TTLakes-Medium.ttf");
+}
+
+@font-face {
+    font-family: TTlakes-article;
+    src: url("../fonts/TTLakes/TTLakes-Regular.ttf");
+}
+
+body {
+    font-family: TTlakes;
+    font-weight: 600;
+}
+
 .burger_menu {
     max-width: 320px;
     box-shadow: 16px 0 52px #0E185033, -2px 0 4px #454F7E05;
@@ -104,4 +129,5 @@ span.active{
 }
 .number {
     margin: 15px 0 40px;
+    font-family: TTlakes-title;
 }
