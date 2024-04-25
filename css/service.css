@@ -28,7 +28,7 @@
 @media screen and (0 <= width < 780px) {
     
     .service {
-        padding-bottom: 60px !important ;
+        padding: 0 15px 60px;
     }
 
     .service__firms {
@@ -52,7 +52,7 @@
 
 @media screen and (780px <= width < 1120px) {
     .service {
-        padding: 0 20px !important;
+        padding: 0 20px 5px;
     }
 
     .service__firms {
@@ -65,14 +65,15 @@
         height: 74px;
     }
 
-    .swiper-slide {
-        width: 220px !important;
-        height: 74px !important;
+    .swiper-wrapper .swiper-slide {
+        width: 220px;
+        height: 74px;
     }
 
-    .swiper-pagination {
-        display: none !important;
+    .swiper .swiper-pagination {
+        display: none;
     }
+
 }
 
 @media screen and (1120px <= width < 2240px) {
@@ -88,6 +89,10 @@
         gap: 16px 32px;
     }
 
+    .service {
+        padding: 0 32px 5px;
+    }
+
 
 
 }
@@ -95,7 +100,7 @@
 /* service section */
 
 .service {
-    padding: 0 32px /*24-tab-screen, 16-phone-screen*/;
+    
     background-color: #F8F8F8;
 }
 
@@ -168,13 +173,7 @@
     margin: 24px 0 34px ;
 }
 
-.icon-icon {
-    font-size: 13px;
-}
-.icon-icon-open {
-    font-size: 13px;
-    margin-right: 15px;
-}
+
 
 
 .swiper .swiper-pagination {
@@ -182,4 +181,22 @@
     margin-top: 15px;
 }
 
+
+.icon-hide,
+.icon-open {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-size: contain;
+    margin-right: 10px;
+}
+
+.icon-hide {
+    background-image: url('../img/icon-hide.png');
+    background-repeat: no-repeat;
+}
+.icon-open {
+    background-image: url('../img/icon-open.png');
+    background-repeat: no-repeat;
+}
 

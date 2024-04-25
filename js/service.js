@@ -13,11 +13,11 @@
     }
     textChanged.textContent = isHidden ? 'Скрыть' : 'Показать';
     if (isHidden) {
-      iconChanged.classList.add('icon-open');
-      iconChanged.classList.remove('icon-hide');
-    } else {
       iconChanged.classList.add('icon-hide');
       iconChanged.classList.remove('icon-open');
+    } else {
+      iconChanged.classList.add('icon-open');
+      iconChanged.classList.remove('icon-hide');
     }
     isHidden = !isHidden;
   });
