@@ -33,7 +33,7 @@
 
     .service__firms {
         grid-auto-flow: column;
-        gap: 0 15px!important;
+        gap: 0 15px;
         
     }
     .service__show-text {
@@ -57,7 +57,7 @@
 
     .service__firms {
         grid-template-columns: repeat( auto-fit, minmax(220px, 1fr) ) !important;
-        gap: 16px 20px !important;
+        gap: 16px 20px;
     }
 
     .service__firm {
@@ -84,9 +84,12 @@
         width: 240px;
         height: 74px;
     }
-    .swiper-pagination {
-        display: none !important;
+    .service__firms {
+        gap: 16px 32px;
     }
+
+
+
 }
 
 /* service section */
@@ -103,10 +106,10 @@
     margin-bottom: 24px; /*16px phone-screen*/
 }
 
-.service__firms {
-    display: grid;
+.service .service__firms {
+    display: grid !important;
     grid-template-columns: repeat( auto-fit, minmax(240px, 1fr) );
-    gap: 16px 32px;
+    
 }
 
 .service__firm {
@@ -118,8 +121,8 @@
     align-items: center;
     border: 1px solid #EAEAEA;
 }
-.swiper-slide {
-    display: flex !important;
+.swiper-wrapper .swiper-slide {
+    display: flex;
 }
 .service__firm img {    
     max-width: 50%;
@@ -174,7 +177,9 @@
 }
 
 
-.swiper-pagination {
-    position: static !important;
+.swiper .swiper-pagination {
+    position: static;
     margin-top: 15px;
 }
+
+
