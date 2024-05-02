@@ -1,26 +1,25 @@
 
-  let firmsParent = document.querySelector('.service__firms');
-  let textShow = document.querySelector('.service__show-text');
-  let textChanged = textShow.lastElementChild;
-  let iconChanged = textShow.firstElementChild;
-  let isHidden = true;
-  
-  textShow.addEventListener('click', function() {
-    for (let i = 0; i < firmsParent.children.length; i++) {
-      if (firmsParent.children[i].classList.contains('hide')) {
-        firmsParent.children[i].style.display = isHidden ? 'flex' : 'none';
-      }
-    }
-    textChanged.textContent = isHidden ? 'Скрыть' : 'Показать';
-    if (isHidden) {
-      iconChanged.classList.add('icon-hide');
-      iconChanged.classList.remove('icon-open');
-    } else {
-      iconChanged.classList.add('icon-open');
-      iconChanged.classList.remove('icon-hide');
-    }
-    isHidden = !isHidden;
-  });
+let elementsParent = document.querySelector('.mySwiper');
+let textShow = document.querySelector('.service__show-text');
+let textChanged = textShow.lastElementChild;
+let iconChanged = textShow.firstElementChild;
+let isHidden = false;
+
+textShow.addEventListener('click', function() {
+
+  if (isHidden) {
+    textChanged.textContent = 'Показать все';
+    elementsParent.style.height = '170px';
+    iconChanged.classList.add('icon-open');
+    iconChanged.classList.remove('icon-hide');
+  } else {
+    textChanged.textContent = 'Скрыть';
+    elementsParent.style.height = 'auto';
+    iconChanged.classList.add('icon-hide');
+    iconChanged.classList.remove('icon-open');
+  }
+  isHidden = !isHidden;
+});
 
   const swiper = new Swiper(".swiper", {
     direction: "horizontal",
