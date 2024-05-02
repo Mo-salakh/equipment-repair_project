@@ -117,6 +117,11 @@
     
 }
 
+.mySwiper {
+    overflow: hidden;
+    height: 170px;
+}
+
 .service__firm {
     border-radius: 5px;
     background-color: #FFFFFF;

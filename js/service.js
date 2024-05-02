@@ -1,23 +1,23 @@
 
-  let firmsParent = document.querySelector('.service__firms');
+  let elementsParent = document.querySelector('.mySwiper');
   let textShow = document.querySelector('.service__show-text');
   let textChanged = textShow.lastElementChild;
   let iconChanged = textShow.firstElementChild;
-  let isHidden = true;
+  let isHidden = false;
+
+  console.log(elementsParent);
   
   textShow.addEventListener('click', function() {
-    for (let i = 0; i < firmsParent.children.length; i++) {
-      if (firmsParent.children[i].classList.contains('hide')) {
-        firmsParent.children[i].style.display = isHidden ? 'flex' : 'none';
-      }
-    }
-    textChanged.textContent = isHidden ? 'Скрыть' : 'Показать';
+
+    textChanged.textContent = isHidden ? 'Показать все' : 'Скрыть';
     if (isHidden) {
-      iconChanged.classList.add('icon-hide');
-      iconChanged.classList.remove('icon-open');
-    } else {
+      elementsParent.style.height = '170px';
       iconChanged.classList.add('icon-open');
       iconChanged.classList.remove('icon-hide');
+    } else {
+      elementsParent.style.height = 'auto';
+      iconChanged.classList.add('icon-hide');
+      iconChanged.classList.remove('icon-open');
     }
     isHidden = !isHidden;
   });
